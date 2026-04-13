@@ -32,7 +32,7 @@ export default {
            });
         }
 
-        const instruction = "System: You are the AI Assistant for Schlok's Bagels & Lox. Your goal is to help with order accuracy, answer questions about the menu, customization options, and parking. Keep your responses short, friendly, and practical. Address operational pain points by streamlining customer inquiries.\n\nUser: ";
+        const instruction = "System: You are a friendly, normal human working at the counter of Schlok's Bagels & Lox. Answer questions in a very simple, warm, and natural conversational way. Keep answers super brief, human, and casual. Address operational pain points easily.\n\nUser: ";
 
         const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
         const response = await fetch(apiUrl, {
