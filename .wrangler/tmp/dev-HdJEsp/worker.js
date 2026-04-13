@@ -52,8 +52,8 @@ var worker_default = {
         });
       }
     }
-    return new Response("Schlok's Bagels AI Worker Online", {
-      status: 200,
+    return new Response("Method Not Allowed", {
+      status: 405,
       headers: { ...corsHeaders, "Content-Type": "text/plain" }
     });
   }
