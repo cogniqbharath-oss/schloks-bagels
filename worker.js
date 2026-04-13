@@ -1,3 +1,8 @@
+// ==========================================
+// SCHLOK's BAGELS AI WORKER CONFIGURATION
+// Worker URL: https://divine-water-8da3.cogniq-bharath.workers.dev/
+// ==========================================
+
 export default {
   async fetch(request, env) {
     const corsHeaders = {
@@ -16,6 +21,8 @@ export default {
     if (request.method === "POST") {
       try {
         const { message } = await request.json();
+        
+        // Configured dynamically as requested
         const apiKey = env.API_KEY_schloks;
         const model = "gemma-3-27b-it";
         

@@ -118,12 +118,8 @@ async function handleMessage(text) {
     appendMessage('Thinking...', 'ai-msg', loadingId);
     
     try {
-        // Pointing to a dummy local/deployed worker URL. 
-        // In reality, this should be the deployed Cloudflare Worker URL.
-        const WORKER_URL = '/worker'; // For local testing or generic path if edge-hosted. Assume they deploy worker.js as the main script or API endpoint
-        // Let's use the full relative path to local dev, but usually worker.js runs on a specific domain.
-        // If they use `wrangler dev` it's usually http://localhost:8787. Using absolute URL placeholder.
-        const response = await fetch('http://localhost:8787/', {
+        const WORKER_URL = 'https://divine-water-8da3.cogniq-bharath.workers.dev/';
+        const response = await fetch(WORKER_URL, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({message: text})
@@ -135,7 +131,7 @@ async function handleMessage(text) {
     } catch (err) {
         const msgEl = document.getElementById(loadingId);
         if (msgEl) msgEl.remove();
-        appendMessage('Error: Cannot reach the AI Worker. Please ensure it is running on http://localhost:8787.', 'ai-msg');
+        appendMessage('Error: Cannot reach the AI Worker. Please verify it is successfully deployed to Cloudflare.', 'ai-msg');
     }
 }
 
