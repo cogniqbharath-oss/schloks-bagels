@@ -341,71 +341,7 @@ footer {
   opacity: 1;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .container {
-    padding: 0 1rem;
-  }
-  nav .container {
-    flex-direction: column;
-    gap: 0.8rem;
-  }
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.8rem;
-  }
-  .nav-links a {
-    font-size: 0.95rem;
-  }
-  .nav-links .btn {
-    padding: 0.6rem 1.2rem !important;
-  }
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    height: auto;
-    padding-top: 130px;
-    padding-bottom: 4rem;
-    gap: 3rem;
-  }
-  .hero h1 {
-    font-size: 2.6rem;
-  }
-  .hero-image img {
-    width: 100%;
-    margin-left: 0;
-    transform: none;
-  }
-  .hero-image img:hover {
-    transform: scale(1.02);
-  }
-  .menu-grid {
-    grid-template-columns: 1fr;
-  }
-  .order-section {
-    padding: 3rem 1.5rem;
-    margin: 3rem 1rem;
-    border-radius: 20px;
-  }
-  .order-section h2 {
-    font-size: 2rem;
-  }
-  .features, .menu-preview, .faq {
-    padding: 4rem 0;
-  }
-  .chatbot-wrapper {
-    left: 15px;
-    right: 15px;
-    bottom: 15px;
-  }
-  .chat-window {
-    width: 100%;
-    height: 60vh;
-    max-height: 500px;
-    margin-bottom: 15px;
-  }
-}
+/* Responsive CSS moved to bottom of file */
 
 /* Chatbot UI */
 .chatbot-wrapper {
@@ -558,4 +494,70 @@ footer {
 .chat-footer .btn-send:hover {
   background: var(--accent);
   transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  nav .container {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+  .nav-links a {
+    font-size: 0.95rem;
+  }
+  .nav-links .btn {
+    padding: 0.6rem 1.2rem !important;
+  }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding-top: 130px;
+    padding-bottom: 4rem;
+    gap: 3rem;
+  }
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+  .hero-image img {
+    width: 100%;
+    margin-left: 0;
+    transform: none;
+  }
+  .hero-image img:hover {
+    transform: scale(1.02);
+  }
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+  .order-section {
+    padding: 3rem 1.5rem;
+    margin: 3rem 1rem;
+    border-radius: 20px;
+  }
+  .order-section h2 {
+    font-size: 2rem;
+  }
+  .features, .menu-preview, .faq {
+    padding: 4rem 0;
+  }
+  .chatbot-wrapper {
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+  }
+  .chat-window {
+    width: 100%;
+    height: 60vh;
+    max-height: 500px;
+    margin-bottom: 15px;
+  }
 }
