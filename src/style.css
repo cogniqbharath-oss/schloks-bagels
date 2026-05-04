@@ -652,6 +652,38 @@ footer {
   font-size: 0.95rem;
 }
 
+.chat-suggestions {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--background);
+  overflow-x: auto;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  scrollbar-width: none; /* Firefox */
+}
+
+.chat-suggestions::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.suggestion-chip {
+  background: var(--white);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  padding: 0.4rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: var(--transition);
+  font-family: 'Outfit', sans-serif;
+}
+
+.suggestion-chip:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
 .chat-footer {
   padding: 1rem;
   background: var(--white);

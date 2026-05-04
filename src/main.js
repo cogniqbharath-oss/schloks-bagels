@@ -111,6 +111,15 @@ if (chatValues.input) {
     });
 }
 
+const suggestionChips = document.querySelectorAll('.suggestion-chip');
+if (suggestionChips.length > 0) {
+    suggestionChips.forEach(chip => {
+        chip.addEventListener('click', () => {
+            handleMessage(chip.textContent);
+        });
+    });
+}
+
 async function handleMessage(text) {
     appendMessage(text, 'user-msg');
     chatValues.input.value = '';
